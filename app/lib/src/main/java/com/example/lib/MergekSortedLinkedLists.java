@@ -30,49 +30,6 @@ public class MergekSortedLinkedLists
         ALinkedlIst l = mergeListSort(list, 0, list.size() - 1);
         printreverseLinkedList(l);
 
-        /*
-
-        PriorityQueue<ALinkedlIst> queue = new PriorityQueue<>(new Comparator<ALinkedlIst>()
-        {
-            @Override
-            public int compare(ALinkedlIst o1, ALinkedlIst o2)
-            {
-                if (o1.value<o2.value)
-                    return -1;
-                else if (o1.value==o2.value)
-                    return 0;
-                else
-                    return 1;
-
-            }
-        });
-
-        ALinkedlIst dummy = new ALinkedlIst(0);
-        ALinkedlIst tail = dummy;
-
-        for (ALinkedlIst node : list)
-        {
-            if (node != null)
-            {
-                queue.add(node);
-            }
-            while (!queue.isEmpty())
-            {
-                tail.next = queue.poll();
-                tail = tail.next;
-
-                if (tail.next != null)
-                    queue.add(tail.next);
-            }
-
-        }
-        while (dummy != null)
-        {
-
-            System.out.print(dummy.value + "->");
-            dummy = dummy.next;
-        }
-*/
 
     }
 
