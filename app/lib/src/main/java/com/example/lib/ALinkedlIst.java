@@ -24,4 +24,16 @@ public class ALinkedlIst
     {
         this.value = valr;
     }
+
+
+     static void printreverseLinkedList(ALinkedlIst lis)
+    {
+        if (lis == null)
+        {
+            return;
+        }
+        System.out.print(lis.value+"->");
+
+        printreverseLinkedList(lis.next);
+    }
 }
