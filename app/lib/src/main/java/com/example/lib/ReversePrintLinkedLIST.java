@@ -9,15 +9,15 @@ public class ReversePrintLinkedLIST
 
     public static void main(String ar[])
     {
-        ALinkedlIst lis =new ALinkedlIst(10);
+        ListNode lis =new ListNode(10);
 
-        lis.next = new ALinkedlIst(20);
-        lis.next.next = new ALinkedlIst(30);
-        lis.next.next.next = new ALinkedlIst(40);
+        lis.next = new ListNode(20);
+        lis.next.next = new ListNode(30);
+        lis.next.next.next = new ListNode(40);
         printreverseLinkedList(lis);
     }
 
-    private static void printreverseLinkedList(ALinkedlIst lis)
+    private static void printreverseLinkedList(ListNode lis)
     {
         if (lis==null){
             return;

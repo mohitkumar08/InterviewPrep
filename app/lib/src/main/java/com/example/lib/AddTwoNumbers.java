@@ -1,8 +1,5 @@
 package com.example.lib;
 
-import java.util.Arrays;
-import java.util.List;
-
 /**
  * @author Mohit Kumar
  * @created 27/01/22}
@@ -11,18 +8,18 @@ public class AddTwoNumbers
 {
     public static void main(String ar[])
     {
-        ALinkedlIst A = new ALinkedlIst(2);
-        A.next = new ALinkedlIst(4);
-        A.next.next = new ALinkedlIst(3);
+        ListNode A = new ListNode(2);
+        A.next = new ListNode(4);
+        A.next.next = new ListNode(3);
 
-        ALinkedlIst B = new ALinkedlIst(5);
-        B.next = new ALinkedlIst(6);
-        B.next.next = new ALinkedlIst(4);
+        ListNode B = new ListNode(5);
+        B.next = new ListNode(6);
+        B.next.next = new ListNode(4);
 
         int carry = 0;
 
-        ALinkedlIst head = new ALinkedlIst(-1);
-        ALinkedlIst curent = head;
+        ListNode head = new ListNode(-1);
+        ListNode curent = head;
 
         while (A != null || B != null)
         {
@@ -42,7 +39,7 @@ public class AddTwoNumbers
             carry = temp / 10;
 
 
-            curent.next = new ALinkedlIst(temp % 10);
+            curent.next = new ListNode(temp % 10);
             curent = curent.next;
 
 
@@ -51,9 +48,9 @@ public class AddTwoNumbers
         }
         if (carry > 0)
         {
-            curent.next = new ALinkedlIst(carry);
+            curent.next = new ListNode(carry);
         }
-        ALinkedlIst.printreverseLinkedList(head.next);
+        ListNode.printreverseLinkedList(head.next);
 
     }
 

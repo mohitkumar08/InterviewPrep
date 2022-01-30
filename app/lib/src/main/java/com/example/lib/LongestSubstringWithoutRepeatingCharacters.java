@@ -10,7 +10,7 @@ public class LongestSubstringWithoutRepeatingCharacters
 {
     public static void main(String ar[])
     {
-        String s = "dvdf";
+        String s = "dvedf";
 
         if (s.length() <= 1)
             return;
@@ -25,7 +25,11 @@ public class LongestSubstringWithoutRepeatingCharacters
             }
             map.put(s.charAt(i), i);
             max = Math.max(max, i - j + 1);
+
+
+
         }
 
+        System.out.print(max);
     }
 }

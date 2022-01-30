@@ -1,10 +1,7 @@
 package com.example.lib;
 
 import java.util.Arrays;
-import java.util.Comparator;
-import java.util.LinkedList;
 import java.util.List;
-import java.util.PriorityQueue;
 
 /**
  * @author Mohit Kumar
@@ -14,26 +11,26 @@ public class MergekSortedLinkedLists
 {
     public static void main(String ar[])
     {
-        ALinkedlIst A = new ALinkedlIst(1);
-        A.next = new ALinkedlIst(4);
-        A.next.next = new ALinkedlIst(5);
+        ListNode A = new ListNode(1);
+        A.next = new ListNode(4);
+        A.next.next = new ListNode(5);
 
-        ALinkedlIst B = new ALinkedlIst(1);
-        B.next = new ALinkedlIst(3);
-        B.next.next = new ALinkedlIst(4);
+        ListNode B = new ListNode(1);
+        B.next = new ListNode(3);
+        B.next.next = new ListNode(4);
 
 
-        ALinkedlIst C = new ALinkedlIst(2);
-        C.next = new ALinkedlIst(6);
+        ListNode C = new ListNode(2);
+        C.next = new ListNode(6);
 
-        List<ALinkedlIst> list = Arrays.asList(A, B, C);
-        ALinkedlIst l = mergeListSort(list, 0, list.size() - 1);
+        List<ListNode> list = Arrays.asList(A, B, C);
+        ListNode l = mergeListSort(list, 0, list.size() - 1);
         printreverseLinkedList(l);
 
 
     }
 
-    private static void printreverseLinkedList(ALinkedlIst lis)
+    private static void printreverseLinkedList(ListNode lis)
     {
         if (lis == null)
         {
@@ -45,7 +42,7 @@ public class MergekSortedLinkedLists
     }
 
 
-    private static ALinkedlIst mergeListSort(List<ALinkedlIst> list, int i, int size)
+    private static ListNode mergeListSort(List<ListNode> list, int i, int size)
     {
 
         if (size == i)
@@ -56,11 +53,11 @@ public class MergekSortedLinkedLists
         int mid = i + size/2;
 
 
-        ALinkedlIst first = mergeListSort(list, i, mid);
-        ALinkedlIst last = mergeListSort(list, mid + 1, size);
+        ListNode first = mergeListSort(list, i, mid);
+        ListNode last = mergeListSort(list, mid + 1, size);
 
-        ALinkedlIst head = new ALinkedlIst(0);
-        ALinkedlIst cur = head;
+        ListNode head = new ListNode(0);
+        ListNode cur = head;
 
         while (first != null && last != null)
         {
