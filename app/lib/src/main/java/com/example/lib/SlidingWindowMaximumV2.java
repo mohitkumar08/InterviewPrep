@@ -51,7 +51,7 @@ public class SlidingWindowMaximumV2
             // The element at the front of the
             // queue is the largest element of
             // previous window, so print it
-            System.out.print(arr[Qi.peek()] + " ");
+            System.out.println(arr[Qi.peek()] + " ");
 
             // Remove the elements which
             // are out of this window

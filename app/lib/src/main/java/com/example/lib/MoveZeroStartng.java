@@ -10,19 +10,19 @@ public class MoveZeroStartng
     {
         int nums[] = new int[]{0, 1, 0, 3, 12, 18, 0};
 
-        int readindex = nums.length-1;
-        int wrightIndex = nums.length-1;
+        int readindex = nums.length - 1;
+        int wrightIndex = nums.length - 1;
 
         while (readindex >= 0)
         {
-            if (nums[readindex]!=0){
-                nums[wrightIndex] = nums[readindex];
-                wrightIndex = wrightIndex-1;
+            if (nums[readindex] != 0)
+            {
+                nums[wrightIndex--] = nums[readindex];
             }
-            readindex-=1;
+            readindex -= 1;
         }
 
-        for (; wrightIndex>=0; wrightIndex--)
+        for (; wrightIndex >= 0; wrightIndex--)
         {
             nums[wrightIndex] = 0;
         }
